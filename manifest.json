@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "deshitterifier",
+    "version": "1.0",
+    "description": "A chrome extension that deshittifies your twitter feed",
+    "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*", "*://x.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["*://*.twitter.com/*", "*://*.x.com/*"],
+
+      "permissions": [],
+      "action": {
+        "default_title": "deshitterifier"
+      }
+  }
+  
